@@ -325,6 +325,31 @@
             color: #6A1B9A;
         }
 
+
+        /* Service cards: each has its own matching accent colour */
+        .features-grid .feature-card:nth-child(1) { --c: #6A1B9A; }
+        .features-grid .feature-card:nth-child(2) { --c: #1565C0; }
+        .features-grid .feature-card:nth-child(3) { --c: #E85D04; }
+        .features-grid .feature-card:nth-child(4) { --c: #AD1457; }
+        .features-grid .feature-card:nth-child(5) { --c: #3949AB; }
+        .features-grid .feature-card:nth-child(6) { --c: #0F9B8E; }
+        .features-grid .feature-card:nth-child(7) { --c: #2E7D32; }
+        .features-grid .feature-card:nth-child(8) { --c: #C62828; }
+        .features-grid .feature-card:nth-child(9) { --c: #00838F; }
+        .features-grid .feature-card:nth-child(10) { --c: #B26A00; }
+        .features-grid .feature-card {
+            border-top: 5px solid var(--c, #6A1B9A);
+            background: linear-gradient(180deg, color-mix(in srgb, var(--c, #6A1B9A) 8%, white) 0%, white 55%);
+        }
+        .features-grid .feature-card h3 { color: var(--c, #6A1B9A); }
+        .features-grid .feature-card .feature-icon {
+            width: 80px; height: 80px; line-height: 80px; margin: 0 auto 1rem;
+            border-radius: 50%; font-size: 2.4rem;
+            background: color-mix(in srgb, var(--c, #6A1B9A) 15%, white);
+            box-shadow: 0 0 0 3px color-mix(in srgb, var(--c, #6A1B9A) 30%, white);
+        }
+        .features-grid .feature-card:hover { box-shadow: 0 12px 28px color-mix(in srgb, var(--c, #6A1B9A) 35%, transparent); }
+
         /* Timing Section */
         /* Batch Gallery Section */
         .batch-gallery {
@@ -986,11 +1011,11 @@
                         <li>Physics</li>
                         <li>Chemistry</li>
                         <li>Biology</li>
+                        <li>Computer Science / Applications</li>
                         <li>Commerce</li>
                         <li>Accountancy</li>
-                        <li>Business Maths</li>
                         <li>Economics</li>
-                        <li>Computer Science / Applications</li>
+                        <li>Business Maths</li>
                         <li>Applied Maths</li>
                     </ul>
                 </div>
@@ -1111,7 +1136,7 @@
                     <div class="feature-icon">👨‍🏫</div>
                     <h3>Expert Teachers</h3>
                     <p>Highly qualified teachers dedicated to student success</p>
-                    <p style="margin-top: 10px; color: #6A1B9A; font-weight: bold;">Click to view our faculty →</p>
+                    <p style="margin-top: 10px; color: var(--c); font-weight: bold;">Click to view our faculty →</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📖</div>
@@ -1122,7 +1147,7 @@
                     <div class="feature-icon">👥</div>
                     <h3>Small Batches</h3>
                     <p>Each student allocated to appropriate teacher and handled with personal care</p>
-                    <p style="margin-top: 10px; color: #6A1B9A; font-weight: bold;">Click to view our batch photos →</p>
+                    <p style="margin-top: 10px; color: var(--c); font-weight: bold;">Click to view our batch photos →</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
@@ -1134,29 +1159,29 @@
                     <h3>Offline & Online Classes</h3>
                     <p>Direct classroom teaching at our Kodungaiyur center, with online classes also available for your convenience</p>
                 </div>
-                <div class="feature-card" style="border-top: 4px solid #0F9B8E;">
+                <div class="feature-card">
                     <div class="feature-icon">🏠</div>
-                    <h3 style="color: #0F9B8E;">Home Tuition</h3>
+                    <h3>Home Tuition</h3>
                     <p>Personalized home tuition also available for students who prefer learning in the comfort of their home</p>
-                    <p style="margin-top: 10px; color: #0F9B8E; font-weight: bold;">📞 Call 9843514251</p>
+                    <p style="margin-top: 10px; color: var(--c); font-weight: bold;">📞 Call 9843514251</p>
                 </div>
                 <div class="feature-card" onclick="showHeadTeacher()" style="cursor: pointer;">
                     <div class="feature-icon">⭐</div>
                     <h3>Our ACADEMIC DIRECTOR</h3>
                     <p>Meet our academic leader</p>
-                    <p style="margin-top: 10px; color: #6A1B9A; font-weight: bold;">Click to know more →</p>
+                    <p style="margin-top: 10px; color: var(--c); font-weight: bold;">Click to know more →</p>
                 </div>
                 <div class="feature-card" onclick="showProprietor()" style="cursor: pointer;">
                     <div class="feature-icon">👩‍💼</div>
                     <h3>OUR PROPRIETOR</h3>
                     <p>Meet the visionary behind our academy</p>
-                    <p style="margin-top: 10px; color: #6A1B9A; font-weight: bold;">Click to know more →</p>
+                    <p style="margin-top: 10px; color: var(--c); font-weight: bold;">Click to know more →</p>
                 </div>
                 <div class="feature-card" onclick="showAcademicAdmin()" style="cursor: pointer;">
                     <div class="feature-icon">📋</div>
                     <h3>OUR ACADEMIC ADMIN</h3>
                     <p>Expert in academic management & guidance</p>
-                    <p style="margin-top: 10px; color: #6A1B9A; font-weight: bold;">Click to know more →</p>
+                    <p style="margin-top: 10px; color: var(--c); font-weight: bold;">Click to know more →</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🏆</div>
@@ -1298,6 +1323,9 @@
                             </a>
                         </div>
                         <div class="phone-entry">
+                            <a href="tel:+914446136938" class="phone-number">☎️ +91 44 4613 6938</a>
+                        </div>
+                        <div class="phone-entry">
                             <a href="mailto:veacademy.2024@gmail.com" class="phone-number">✉️ veacademy.2024@gmail.com</a>
                         </div>
                     </div>
@@ -1390,7 +1418,7 @@
     <footer>
         <div class="container">
             <p id="footer-address" style="margin-top: 0.5rem;">📍 124, Kamarajar Salai, Kodungaiyur, Chennai - 600118</p>
-            <p style="margin-top: 0.5rem;">📞 9843514251 | 9791082244</p>
+            <p style="margin-top: 0.5rem;">📞 9843514251 | 9791082244 | ☎️ +91 44 4613 6938</p>
             <div class="footer-social">
                 <a href="https://www.google.co.in/search?q=VENNILA+EDUCATIONAL+ACADEMY&ludocid=6234913570291562017&lsig=AB86z5XBSXSJnDmj4YFIqsIWOKVW#ebo=0" target="_blank" rel="noopener" title="Google Reviews">
                     <svg viewBox="0 0 24 24"><path d="M12 10.8v3.6h5.14c-.22 1.32-1.62 3.87-5.14 3.87-3.1 0-5.63-2.57-5.63-5.73S8.9 6.81 12 6.81c1.76 0 2.94.75 3.62 1.4l2.47-2.38C16.55 4.28 14.48 3.4 12 3.4 6.94 3.4 2.85 7.5 2.85 12.54S6.94 21.68 12 21.68c6.93 0 8.37-4.87 8.37-7.4 0-.5-.05-.87-.12-1.24H12z"/></svg>
